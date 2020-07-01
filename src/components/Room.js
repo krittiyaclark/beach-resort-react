@@ -26,6 +26,7 @@ const Room = ({ room }) => {
 	);
 };
 
+// Room has an room object
 Room.propTypes = {
 	room: PropTypes.shape({
 		name: PropTypes.string.isRequired,
@@ -34,4 +35,5 @@ Room.propTypes = {
 		price: PropTypes.number.isRequired,
 	}),
 };
+
 export default Room;
