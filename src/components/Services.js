@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
-import Titile from '../components/Titile';
+import Titile from './Titile';
 
 class Services extends Component {
 	state = {
