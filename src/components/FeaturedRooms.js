@@ -20,7 +20,7 @@ class FeaturedRooms extends Component {
 		});
 
 		return (
-			<section>
+			<section className='featured-rooms'>
 				<Titile title='Featured Rooms' />
 				<div className='featured-rooms-center'>
 					{loading ? <Loading /> : rooms}
