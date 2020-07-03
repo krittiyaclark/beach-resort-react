@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import { RoomContext } from '../Context';
 import defaultBcg from '../images/room-1.jpeg';
@@ -25,7 +24,7 @@ class SingleRoom extends Component {
 	render() {
 		const { getRoom } = this.context;
 		const room = getRoom(this.state.slug);
-		console.log(room);
+		// console.log(room);
 		// First loading room.name will be an undefined
 		// Check if room is undefined
 		if (!room) {
@@ -53,7 +52,7 @@ class SingleRoom extends Component {
 		} = room;
 		// Output only three images
 		const [mainImg, ...defaultImg] = images;
-		console.log(defaultImg);
+		// console.log(defaultImg);
 		return (
 			// Create Hero images to be dynamically
 			// Set an default image
