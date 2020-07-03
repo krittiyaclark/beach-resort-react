@@ -14,7 +14,7 @@ class FeaturedRooms extends Component {
 		// const { greeting, name } = this.context;
 		// console.log(value);
 		let { loading, featuredRooms: rooms } = this.context;
-		console.log(rooms);
+		// console.log(rooms);
 		rooms = rooms.map((room) => {
 			return <Room key={room.id} room={room} />;
 		});

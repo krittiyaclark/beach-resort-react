@@ -6,7 +6,7 @@ import defaultImg from '../images/room-1.jpeg';
 
 const Room = ({ room }) => {
 	const { name, slug, images, price } = room;
-	console.log(room);
+	// console.log(room);
 
 	return (
 		<article className='room'>

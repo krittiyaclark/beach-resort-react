@@ -26,7 +26,7 @@ class RoomProvider extends Component {
 
 	componentDidMount() {
 		let rooms = this.formatData(items);
-		console.log(rooms);
+		// console.log(rooms);
 		let featuredRooms = rooms.filter((room) => room.featured === true);
 		let maxPrice = Math.max(...rooms.map((item) => item.price));
 		let maxSize = Math.max(...rooms.map((item) => item.size));
@@ -61,7 +61,7 @@ class RoomProvider extends Component {
 		const target = event.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		const name = event.target.name;
-		console.log(name, value);
+		// console.log(name, value);
 
 		this.setState(
 			{
