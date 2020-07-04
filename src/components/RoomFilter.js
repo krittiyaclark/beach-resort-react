@@ -45,7 +45,6 @@ const RoomsFilter = ({ rooms }) => {
 		<section className='filter-container'>
 			<Title title='search rooms' />
 			<form className='filter-form'>
-				{/* select type */}
 				<div className='form-group'>
 					<label htmlFor='type'>room type</label>
 					<select
@@ -57,8 +56,6 @@ const RoomsFilter = ({ rooms }) => {
 						{types}
 					</select>
 				</div>
-				{/* end of select type */}
-				{/* guests */}
 				<div className='form-group'>
 					<label htmlFor='capacity'>Guests</label>
 					<select
@@ -70,8 +67,6 @@ const RoomsFilter = ({ rooms }) => {
 						{guests}
 					</select>
 				</div>
-				{/* end of guests */}
-				{/* room price */}
 				<div className='form-group'>
 					<label htmlFor='price'>room price ${price}</label>
 					<input
@@ -85,8 +80,6 @@ const RoomsFilter = ({ rooms }) => {
 						className='form-control'
 					/>
 				</div>
-				{/* end of room price*/}
-				{/* size */}
 				<div className='form-group'>
 					<label htmlFor='price'>room size</label>
 					<div className='size-inputs'>
@@ -106,8 +99,6 @@ const RoomsFilter = ({ rooms }) => {
 						/>
 					</div>
 				</div>
-				{/* end of select type */}
-				{/* extras */}
 				<div className='form-group'>
 					<div className='single-extra'>
 						<input
@@ -129,7 +120,6 @@ const RoomsFilter = ({ rooms }) => {
 						<label htmlFor='breakfast'>pets</label>
 					</div>
 				</div>
-				{/* end of extras type */}
 			</form>
 		</section>
 	);

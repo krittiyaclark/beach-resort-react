@@ -53,9 +53,9 @@ class SingleRoom extends Component {
 		// Output only three images
 		const [mainImg, ...defaultImg] = images;
 
+		// Create Hero images to be dynamically
+		// Set an default image
 		return (
-			// Create Hero images to be dynamically
-			// Set an default image
 			<>
 				<StyledHero img={mainImg || this.state.defaultBcg}>
 					<Banner title={`${name} room`}>
