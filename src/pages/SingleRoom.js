@@ -10,7 +10,7 @@ class SingleRoom extends Component {
 	constructor(props) {
 		super(props);
 		// this.props passed by react-router -> {history: {}, match: {}, staticContext: undefined}
-		// console.log(this.props);
+
 		this.state = {
 			slug: this.props.match.params.slug, // Uniq slug
 			defaultBcg,
@@ -24,7 +24,7 @@ class SingleRoom extends Component {
 	render() {
 		const { getRoom } = this.context;
 		const room = getRoom(this.state.slug);
-		// console.log(room);
+
 		// First loading room.name will be an undefined
 		// Check if room is undefined
 		if (!room) {
@@ -52,7 +52,7 @@ class SingleRoom extends Component {
 		} = room;
 		// Output only three images
 		const [mainImg, ...defaultImg] = images;
-		// console.log(defaultImg);
+
 		return (
 			// Create Hero images to be dynamically
 			// Set an default image
@@ -78,7 +78,7 @@ class SingleRoom extends Component {
 						<h3>info</h3>
 						<h6>price : ${price}</h6>
 						<h6>size: ${size} SQFT</h6>
-						{/* Conditional check if more than 1 person output 'people' otherwise output 'person' */}
+
 						<h6>
 							max capacity :{' '}
 							{capacity > 1 ? `${capacity} people` : `${capacity} person`}

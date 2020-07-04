@@ -12,9 +12,9 @@ class FeaturedRooms extends Component {
 	render() {
 		// Passing the value state from Context.js
 		// const { greeting, name } = this.context;
-		// console.log(value);
+
 		let { loading, featuredRooms: rooms } = this.context;
-		// console.log(rooms);
+
 		rooms = rooms.map((room) => {
 			return <Room key={room.id} room={room} />;
 		});
