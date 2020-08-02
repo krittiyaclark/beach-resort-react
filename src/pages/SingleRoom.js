@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import Banner from '../components/Banner';
-import { RoomContext } from '../Context';
-import defaultBcg from '../images/room-1.jpeg';
-import StyledHero from '../components/StyledHero';
+import Banner from '../components/Banner'
+import { RoomContext } from '../Context'
+import defaultBcg from '../images/room-1.jpeg'
+import StyledHero from '../components/StyledHero'
 
 class SingleRoom extends Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		// this.props passed by react-router -> {history: {}, match: {}, staticContext: undefined}
 
 		this.state = {
 			slug: this.props.match.params.slug, // Uniq slug
 			defaultBcg,
-		};
+		}
 	}
 
 	// Access context from RoomContext
-	static contextType = RoomContext;
+	static contextType = RoomContext
 	// Access parameter :slug
 	// componentDidMount() {}
 	render() {
-		const { getRoom } = this.context;
-		const room = getRoom(this.state.slug);
+		const { getRoom } = this.context
+		const room = getRoom(this.state.slug)
 
 		// First loading room.name will be an undefined
 		// Check if room is undefined
@@ -35,7 +35,7 @@ class SingleRoom extends Component {
 						back to rooms
 					</Link>
 				</div>
-			);
+			)
 		}
 		// Check if room is be found
 		// Get from data fields
@@ -49,9 +49,9 @@ class SingleRoom extends Component {
 			breakfast,
 			pets,
 			images,
-		} = room;
+		} = room
 		// Output only three images
-		const [mainImg, ...defaultImg] = images;
+		const [mainImg, ...defaultImg] = images
 
 		// Create Hero images to be dynamically
 		// Set an default image
@@ -67,7 +67,7 @@ class SingleRoom extends Component {
 				<section className='single-room'>
 					<div className='single-room-images'>
 						{defaultImg.map((item, index) => {
-							return <img key={index} src={item} alt={name} />;
+							return <img key={index} src={item} alt={name} />
 						})}
 					</div>
 					<div className='single-room-info'>
@@ -90,14 +90,15 @@ class SingleRoom extends Component {
 				<section className='room-extras'>
 					<h6>extras</h6>
 					<ul className='extras'>
-						{extras.map((item, index) => {
-							return <li key={index}>- {item}</li>;
-						})}
+						{extras &&
+							Object.values(extras).map((item, index) => {
+								return <li key={index}>- {item}</li>
+							})}
 					</ul>
 				</section>
 			</>
-		);
+		)
 	}
 }
 
-export default SingleRoom;
+export default SingleRoom
