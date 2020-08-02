@@ -75,16 +75,18 @@ class SingleRoom extends Component {
 							<h3>details</h3>
 							<p>{description}</p>
 						</article>
-						<h3>info</h3>
-						<h6>price : ${price}</h6>
-						<h6>size: ${size} SQFT</h6>
+						<article className='info'>
+							<h3>info</h3>
+							<h6>price : ${price}</h6>
+							<h6>size: ${size} SQFT</h6>
 
-						<h6>
-							max capacity :{' '}
-							{capacity > 1 ? `${capacity} people` : `${capacity} person`}
-						</h6>
-						<h6>{pets ? 'pets allowed' : 'no pets allowed'}</h6>
-						<h6>{breakfast && 'free breakfast included'}</h6>
+							<h6>
+								max capacity :{' '}
+								{capacity > 1 ? `${capacity} people` : `${capacity} person`}
+							</h6>
+							<h6>{pets ? 'pets allowed' : 'no pets allowed'}</h6>
+							<h6>{breakfast && 'free breakfast included'}</h6>
+						</article>
 					</div>
 				</section>
 				<section className='room-extras'>
